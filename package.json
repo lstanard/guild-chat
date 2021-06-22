@@ -1,0 +1,10 @@
+{
+  "name": "guild-chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Charlie Stanard <louis.stanard@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "^2.3.1"
+  }
+}

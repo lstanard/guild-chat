@@ -1,0 +1,56 @@
+.app {
+  padding: 2rem 5rem;
+}
+
+.app-header {
+  margin-bottom: 3rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.friends-panel {
+  border: 1px solid #ccc;
+  border-radius: 1rem 0 0 1rem;
+  padding: 1rem 2rem;
+  width: 25%;
+}
+
+.messages-panel {
+  border: 1px solid #ccc;
+  border-left: 0;
+  border-radius: 0 1rem 1rem 0;
+  padding: 1rem 2rem;
+  width: 75%;
+}
+
+.message-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.message {
+  background-color: mediumseagreen;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem 0 1rem;
+  margin: 0 auto 0.25rem 0;
+  width: 60%;
+}
+
+.message span {
+  font-size: 0.75rem;
+}
+
+.message-self {
+  background-color: dodgerblue;
+  margin-right: 0;
+  margin-left: auto;
+}
