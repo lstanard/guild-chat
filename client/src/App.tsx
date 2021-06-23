@@ -23,10 +23,10 @@ function App(): ReactElement {
     content = <Login />;
   } else {
     content = (
-      <div className="main">
+      <main className="main">
         <Friends className="friends-panel" />
         <Messages className="messages-panel" socket={socket} />
-      </div>
+      </main>
     );
   }
 

@@ -16,7 +16,7 @@ const Friends = ({ className }: FriendsProps): ReactElement => {
   }, [dispatch]);
 
   return (
-    <div className={className}>
+    <aside className={className}>
       <h3>Friends List</h3>
       {friends?.length ? (
         <ul>
@@ -31,7 +31,7 @@ const Friends = ({ className }: FriendsProps): ReactElement => {
       ) : (
         <p>You have 0 friends</p>
       )}
-    </div>
+    </aside>
   );
 };
 

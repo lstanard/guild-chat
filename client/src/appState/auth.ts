@@ -5,12 +5,10 @@ import { UserEntity, UserCredentials } from '../../appTypes';
 
 interface AuthState {
   user: null | UserEntity;
-  authError: boolean;
 }
 
 const initialState: AuthState = {
-  user: null,
-  authError: false
+  user: null
 };
 
 export const authenticateUser = createAsyncThunk(
@@ -47,10 +45,7 @@ export const authentication = createSlice({
       authenticateUser.fulfilled,
       (state, action: PayloadAction<null | UserEntity>) => {
         if (action.payload) {
-          state.authError = false;
           state.user = action.payload;
-        } else {
-          state.authError = true;
         }
       }
     );

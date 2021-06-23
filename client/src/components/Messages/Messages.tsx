@@ -48,12 +48,17 @@ const Messages = ({ socket, className }: MessagesProps): ReactElement => {
 
   const sendMessage = useCallback(() => {
     const input = inputRef.current;
-    socket.emit('send-message', {
-      id: `${Date.now()}`,
-      sender: authenticatedUser?.id,
-      recipient: otherUser?.id,
-      text: input?.value
-    });
+    if (input?.value) {
+      socket.emit('send-message', {
+        id: `${Date.now()}`,
+        sender: authenticatedUser?.id,
+        recipient: otherUser?.id,
+        text: input.value
+      });
+    }
+    if (inputRef?.current) {
+      inputRef.current.value = '';
+    }
   }, [socket, otherUser, authenticatedUser]);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 .app {
-  padding: 2rem 5rem;
+  padding: 1rem;
 }
 
 .app-header {
@@ -8,32 +8,29 @@
 
 .main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .friends-panel {
   border: 1px solid #ccc;
-  border-radius: 1rem 0 0 1rem;
   padding: 1rem 2rem;
-  width: 25%;
 }
 
 .messages-panel {
   border: 1px solid #ccc;
-  border-left: 0;
-  border-radius: 0 1rem 1rem 0;
+  border-top: 0;
   padding: 1rem 2rem;
-  width: 75%;
 }
 
 .message-list {
   align-items: center;
+  border-bottom: 1px solid #ccc;
   display: flex;
   flex-direction: column;
   justify-content: center;
   list-style: none;
-  margin: 0 0 2rem;
-  padding: 0;
+  margin: 0 0 1.5rem;
+  padding: 0 0 1.5rem;
 }
 
 .message {
@@ -42,7 +39,7 @@
   color: #fff;
   padding: 0.5rem 1rem 0 1rem;
   margin: 0 auto 0.25rem 0;
-  width: 60%;
+  width: 80%;
 }
 
 .message span {
@@ -53,4 +50,30 @@
   background-color: dodgerblue;
   margin-right: 0;
   margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .app {
+    padding: 2rem 5rem;
+  }
+
+  .main {
+    flex-direction: row;
+  }
+
+  .friends-panel {
+    border-radius: 1rem 0 0 1rem;
+    width: 25%;
+  }
+
+  .messages-panel {
+    border: 1px solid #ccc;
+    border-radius: 0 1rem 1rem 0;
+    border-left: 0;
+    width: 75%;
+  }
+
+  .message {
+    width: 60%;
+  }
 }

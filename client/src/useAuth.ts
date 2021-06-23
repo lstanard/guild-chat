@@ -13,22 +13,17 @@ export interface UserAuth {
 
 export default function useAuth(): UserAuth {
   const dispatch = useAppDispatch();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [error, setError] = useState(false);
 
   /**
    * Attempt to get user from store
    */
-  const { user, authError } = useAppSelector((state) => state.authentication);
-
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [error, setError] = useState(authError || false);
+  const { user } = useAppSelector((state) => state.authentication);
 
   useLayoutEffect(() => {
     setIsAuthenticated(!!user?.id);
   }, [user]);
-
-  useLayoutEffect(() => {
-    setError(authError);
-  }, [authError]);
 
   /**
    * Log user in
@@ -38,8 +33,12 @@ export default function useAuth(): UserAuth {
   const login = useCallback(
     async ({ username, password }: UserCredentials) => {
       if (username && password) {
-        setError(false);
-        dispatch(authenticateUser({ username, password }));
+        const authAction = await dispatch(
+          authenticateUser({ username, password })
+        );
+        if (!authAction?.payload) {
+          setError(true);
+        }
       } else {
         setError(true);
       }
