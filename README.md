@@ -2,7 +2,7 @@
 
 ## General Notes
 
-- Recommend node `v14`
+- Recommend node `v12` or `v14`
 - Make sure the server is running before starting the client otherwise the socket connection may not be established
 
 ## Logging In
