@@ -48,14 +48,7 @@ Start the React client on port `3000`:
 # Things I would do with more time:
 
 - Store user credentials or a token in localStorage so you don't have to log in again after page refresh
-- Enable chat between more than 2 users, currently this is hard-coded to only work with the 2 test users
-- Split some of the components up into smaller pieces
-- Timestamps on messages
 - Loading indicator when fetching data (friends list, messages)
-- Use Sass for styling
-- Add eslint
 - Use TypeScript for the `server`
 - Watch for changes to `server` so I don't have to kill/restart the server with every change
-- Press "Enter" key to submit login form and send messages
-- Split single large App test file up into separate specs
 - Write test for sending a message and verifying the other user receives it
