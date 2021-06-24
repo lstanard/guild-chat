@@ -53,6 +53,7 @@ Start the React client on port `3000`:
 - Timestamps on messages
 - Loading indicator when fetching data (friends list, messages)
 - Use Sass for styling
+- Add eslint
 - Use TypeScript for the `server`
 - Watch for changes to `server` so I don't have to kill/restart the server with every change
 - Press "Enter" key to submit login form and send messages
