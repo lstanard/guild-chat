@@ -12,12 +12,5 @@
     "firstName": "William",
     "lastName": "Riker",
     "passwordHash": "098f6bcd4621d373cade4e832627b4f6"
-  },
-  "b7aedc74-08b2-4d57-a6e0-cc071d641ac2": {
-    "id": "b7aedc74-08b2-4d57-a6e0-cc071d641ac2",
-    "username": "test-user",
-    "firstName": "Test",
-    "lastName": "User",
-    "passwordHash": "098f6bcd4621d373cade4e832627b4f6"
   }
 }

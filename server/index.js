@@ -61,9 +61,7 @@ app.get('/users', (req, res) => {
   const users = Object.values(usersDB)
     .map((userRecord) => {
       const { id, username, firstName, lastName } = userRecord;
-      if (firstName !== 'Test') {
-        return { id, username, fullName: `${firstName} ${lastName}` };
-      }
+      return { id, username, fullName: `${firstName} ${lastName}` };
     })
     .filter(Boolean);
 

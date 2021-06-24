@@ -68,7 +68,7 @@ const Messages = ({ socket, className }: MessagesProps): ReactElement => {
   }, [socket, dispatch]);
 
   return (
-    <div className={className}>
+    <div className={className} data-cy="messages-panel">
       <div>
         <h3>Chat with {otherUser?.fullName}</h3>
         {messages.length ? (
@@ -80,7 +80,7 @@ const Messages = ({ socket, className }: MessagesProps): ReactElement => {
                   'message-self': message.sender === authenticatedUser?.id
                 })}
               >
-                <span>From: {users[message.sender].fullName}</span>
+                <span>From: {users[message.sender]?.fullName}</span>
                 <p>{message.text}</p>
               </li>
             ))}
@@ -90,7 +90,7 @@ const Messages = ({ socket, className }: MessagesProps): ReactElement => {
         )}
       </div>
       <div>
-        <input type="text" ref={inputRef} />
+        <input type="text" ref={inputRef} data-cy="message-input" />
         <button type="button" onClick={sendMessage}>
           Send Message
         </button>

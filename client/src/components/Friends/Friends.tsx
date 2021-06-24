@@ -2,6 +2,7 @@ import React, { useEffect, ReactElement } from 'react';
 
 import { useAppDispatch, useAppSelector } from '../../appState/hooks';
 import { fetchUsers, getUserFriends } from '../../appState/entities';
+import messages from '../../messages';
 
 export interface FriendsProps {
   className?: string;
@@ -16,8 +17,8 @@ const Friends = ({ className }: FriendsProps): ReactElement => {
   }, [dispatch]);
 
   return (
-    <aside className={className}>
-      <h3>Friends List</h3>
+    <aside className={className} data-cy="friends-panel">
+      <h3>{messages.en.FriendsListHeader}</h3>
       {friends?.length ? (
         <ul>
           {friends.map((friend) => {
